@@ -20,21 +20,38 @@
 
 
     <?php
+require 'vendor/autoload.php';
+
+// Routing
 $page = 'home';
 if(isset($_GET['p'])) {
   $page = $_GET['p'];
 }
 
+
+// Rendu du template
+$loader = new Twig_loader_Filesystem(__DIR__ . '/templates');
+$twig = new Twig_Environment($loader, [
+          'cache' => __DIR__ . '/tmp' // initier un nouveaux environnemnt
+]);
   if($page === 'home') {
-    require 'home.php';// dans cette page on va pouvoir afficher un template html php... en utilisant 'twig'. pour ca il faut installer twug avec composer.
+
+    echo $twig->render('home.twig'); // indiquer le fichier a rendre.
+    
+   // require 'home.php';// dans cette page on va pouvoir afficher un template html php... en utilisant 'twig'. pour ca il faut installer twug avec composer.
   }
 ?>
     Pour installer twig , deux manière s'offrent a nous :
     # installer twig manuellement et ensuite l'inclure 
-    # Soit utiliser composer ' composer require "twig/twig:1.0" ' vue que maintenant est indispensable pour php.
+    # Soit utiliser composer ' composer require "twig/twig:~1.0" ' vue que maintenant est indispensable pour php.
 
   <h3>INSTALLER COMPOSER</h3>
      sur un terminal, on initialise composer avec la commande "composer init"
-    après on néglige les dépendences interactives avec 'no' pourles laisser par defaut, 
+    après on néglige les dépendences interactives avec 'no' pourles laisser par defaut.
+    l'etape suivante est de saisir la commande 'composer require "twig/twig:~1.0" ' dans le terminal pour télécharger les dépondances .
+
+    Dans le projet ,on va inclure un autoloader  qui permet de charger les classe s de twig... (voirligne 23).
+    en suivant la documentation , au niveau de "Basic API Usage", on nous explique comment utiliser Twig, pour le coté pratique ,on va choisir la deuxième option qui : (voir la ligne 'Twig_Loader_Filessystem'...)
+    
   </body>
 </html>
