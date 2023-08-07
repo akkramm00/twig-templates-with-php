@@ -52,6 +52,23 @@ $twig = new Twig_Environment($loader, [
 
     Dans le projet ,on va inclure un autoloader  qui permet de charger les classe s de twig... (voirligne 23).
     en suivant la documentation , au niveau de "Basic API Usage", on nous explique comment utiliser Twig, pour le coté pratique ,on va choisir la deuxième option qui : (voir la ligne 'Twig_Loader_Filessystem'...)
+
+    <h2>Utilisation de twig</h2>
+    <p>
+    Pour utiliser Twig dans notre application PHP, on doit tout d'abord installer le gestionnaire de paquet Composer. Après avoir installé Composer, on peut exécuter la commande "composer require twi/twig" dfans notre ternimal pour installer Twig dans notre projet.
+    </p>
+    <?php
+    $loader = new Twig\FilesystemLoader('templates');
+    $twig = new Twig\Environment($loader);
+    ?>
+
+    <p>
+      La classe "Twig\Environment" esyt la classe principale de Twig. Elle est utilisdée pour créer une instance de l'environnement de Twig avec les configurations requises pour l'application.
+      La classe "Twig\Loader\FilesystemLoader" est un hcargeurde modèles qui charge des fichiers de modèlesTwig à partir d'un repertoire sur le disque.
+      Elle permet de spécifier le chemin d'accès aux modèles dans le système de fichiers et de charger les modèles nécéssaires.
+ Lorsque nous céons un onbjet environnement Twig avec un chargeur de système de fichiers , le constructeur de la classe Twig\Environment prend en premier argument le chargeur de modèle que nous avons instancié.
+      
+    </p>
     
   </body>
 </html>
