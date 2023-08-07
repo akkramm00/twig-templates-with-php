@@ -98,6 +98,16 @@ Enfin la méthode "render" de cet objet est appelée pour générer le rendu fin
     L'attribut"action de la balise "form" définit l'URL à laquelle les données du formulairedoivent etre envoyées lorsque l'utilisateur soumet le formulaire. Ici , la valeur de l'attribut"action est définie comme "{{base_url}}/profile".
     Cette syntaxe est spécifique à Twig, elle permet d'insérer une variable Twig dans le code   HTML. La valeur réelle de cette variable sera remplacée lors du rendu de la page . En l'occurence , la variable "base_url" contiendra l'URl de la base de l'pplication. Ainsi , lorsque l'utilisateur soumettrz le formulaire , les données seront envoyées à l'URLcomplète "base_url/profile"
   </p>
-    
-  </body>
+
+  <!-- profile.twig --> 
+<ul>
+    <li>Email : {{ email}}</li>
+</ul> 
+<a href="{{base_url}}/logout" >Se connecter</a>
+  <!-- Fin profile.twig -->  
+
+    <p>
+      Dans ce code HTML ci-dessus, on utilise la syntaxe Twig pour insérer dynamiquement la valeur de la variable "email" dans la liste non ordonnée. Les symbolers double "{{}}" sont utilisées pour indiquer une variable Twig. En outre , uin lien hypertexte est également créé en utilisant la balise "a". La valaeur de l'attribit "href" del, abalise "a" est définie comme "{{base_url/logout}}", ce qui signifie que lersque l'utilisateur cliquera sur le lien, il sera redirigé vers l'URL "base_url/logout"
+.    </p>
+</body>
 </html>
