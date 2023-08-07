@@ -109,5 +109,19 @@ Enfin la méthode "render" de cet objet est appelée pour générer le rendu fin
     <p>
       Dans ce code HTML ci-dessus, on utilise la syntaxe Twig pour insérer dynamiquement la valeur de la variable "email" dans la liste non ordonnée. Les symbolers double "{{}}" sont utilisées pour indiquer une variable Twig. En outre , uin lien hypertexte est également créé en utilisant la balise "a". La valaeur de l'attribit "href" del, abalise "a" est définie comme "{{base_url/logout}}", ce qui signifie que lersque l'utilisateur cliquera sur le lien, il sera redirigé vers l'URL "base_url/logout"
 .    </p>
+     <!-- profileController.twig --> 
+
+  <?php
+  $template = $ twig-> load('p^rofile.twig');
+echo $template->render([
+                       'base_url' =>BASE_URL,
+                       'email' => $user -> gegtEmail(),
+                       
+]);
+  ?>
+<p>
+  Dans ce code , la variable "$template" est définie en chargeant le fichier de modèle Twig  "profile.twig" à l'aide de la méthode load() de l'objet $twig. 
+  Ensuite , la métohde "render()" de l'objet $template est appelée avce un tableau azssociatif contenant les variables  à passer au modèle Twig. Dans cet exemple , la variablr "base_url" est définie avce la constante "BASE_URL" et la variable "email est définie avec la m"thode getEmail() de l'objket $user. Enfin , le contenu du rendu est affiché à l'utilisateur en utilisant la commande echo.
+</p>
 </body>
 </html>
