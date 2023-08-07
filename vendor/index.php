@@ -89,6 +89,15 @@ Enfin la méthode "render" de cet objet est appelée pour générer le rendu fin
   Dans cet exemple , la variablr "BASE_URL" est transmise au modèle Twig sous le nom "base_url".
   Enfin, le contenu est affichéà l'utilisateur en utilisant la commande "echo".
 </p>
+
+<?php
+// form.twig
+<form action="{{base_url}}/profile" method="post">
+?>
+  <p>
+    L'attribut"action de la balise "form" définit l'URL à laquelle les données du formulairedoivent etre envoyées lorsque l'utilisateur soumet le formulaire. Ici , la valeur de l'attribut"action est définie comme "{{base_url}}/profile".
+    Cette syntaxe est spécifique à Twig, elle permet d'insérer une variable Twig dans le code   HTML. La valeur réelle de cette variable sera remplacée lors du rendu de la page . En l'occurence , la variable "base_url" contiendra l'URl de la base de l'pplication. Ainsi , lorsque l'utilisateur soumettrz le formulaire , les données seront envoyées à l'URLcomplète "base_url/profile"
+  </p>
     
   </body>
 </html>
