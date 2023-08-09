@@ -123,5 +123,10 @@ echo $template->render([
   Dans ce code , la variable "$template" est définie en chargeant le fichier de modèle Twig  "profile.twig" à l'aide de la méthode load() de l'objet $twig. 
   Ensuite , la métohde "render()" de l'objet $template est appelée avce un tableau azssociatif contenant les variables  à passer au modèle Twig. Dans cet exemple , la variablr "base_url" est définie avce la constante "BASE_URL" et la variable "email est définie avec la m"thode getEmail() de l'objket $user. Enfin , le contenu du rendu est affiché à l'utilisateur en utilisant la commande echo.
 </p>
+<h2>Essentiel</h2>
+<p>
+  En conclusion, le modèle MVC est une architecture très courante en développement webavec PHP. IL offre de nombreux avantages en termes d'organisation, de maintenabilité et de modularité du code . En comprenant bien les composantds principaux du modèle MVC, à savoir le Modèle, la vue et le  contrôlleur; vous pouvez créer des applications web efficaces, sécurisées et faciles à maintenir. Cependant, il est important de se rappeler que la mise en place d'un modèle MVC ne garantit pas àelle seule la qualité d'une application. Il est également important d'appliquer des bonnes pratiques  de programmation , de validation et de sécurisation des données, ainsi que de suivre les principes de conception et d'architecturelogicielle pour obtenir des résultats optimaux. 
+  En pratiquant régulièrement et en vous tenant informé des nouvelles tendances et technologies en matière de développement web, vous pouvez progresser rapidement et acquérir les compétences nécessaires pour devenir un déveppeur web compétent et réussir dans ce domaine en constante évolution.
+</p>
 </body>
 </html>
