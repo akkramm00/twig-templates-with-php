@@ -44,6 +44,8 @@ class User {
     $stmt->$conn->prepare("INSERT INTO users(email,password) VALUES (? ,?)";
     $stmt->bind_param("ss" , $this->, $this->password);
     $stmt->execute();
+
+    $stmt->close(); 
   }
 }
 ?>
